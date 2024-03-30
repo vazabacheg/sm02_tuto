@@ -1,0 +1,41 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/iTIbQk8XroV
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+
+export default function Component() {
+  return (
+    <div className="mx-auto max-w-sm space-y-6">
+      <div className="space-y-2 text-center">
+        <h1 className="text-3xl font-bold">Registro</h1>
+        <p className="text-gray-500 dark:text-gray-400">Ingresa tu información para crear una cuenta</p>
+      </div>
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="name">Nombre</Label>
+          <Input id="name" placeholder="Nombre" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="email">Correo electrónico</Label>
+          <Input id="email" placeholder="Correo" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="password">Contraseña</Label>
+          <Input id="password" required type="password" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="confirm-password">Confirmar contraseña</Label>
+          <Input id="confirm-password" required type="password" />
+        </div>
+        <Button className="w-full" type="submit">
+          Registrarse
+        </Button>
+      </div>
+    </div>
+  )
+}
+
